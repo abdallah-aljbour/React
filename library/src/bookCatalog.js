@@ -38,22 +38,6 @@ const Catalog = () => {
     fetchData();
   }, []);
 
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       "https://react-75781-default-rtdb.firebaseio.com/books.json"
-  //     );
-  //     if (response.data) {
-  //       const formattedData = Object.keys(response.data).map((key) => ({
-  //         id: key,
-  //         ...response.data[key],
-  //       }));
-  //       setData(formattedData);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error fetching data from Firebase:", error);
-  //   }
-  // };
   const fetchData = async () => {
     try {
       const response = await axios.get(

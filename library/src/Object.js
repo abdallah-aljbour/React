@@ -1,3 +1,5 @@
+import React from "react";
+
 function Object() {
   const initState = {
     books: [
@@ -39,36 +41,21 @@ function Object() {
       },
     ],
   };
-  const divStyle = {
-    border: "1px solid #ccc",
-    padding: "10px",
-    marginBottom: "10px",
-    borderRadius: "5px",
-    backgroundColor: "#f0f0f0",
-    boxShadow: "0 0 5px rgba(0, 0, 0, 0.1)",
-  };
-
-  const pStyle = {
-    margin: "5px 0",
-    fontWeight: "bold",
-  };
-
-  const containerStyle = {
-    maxWidth: "600px",
-    margin: "auto",
-    paddingTop: "20px",
-  };
 
   return (
-    <div className="container" style={containerStyle}>
+    <div className="container mx-auto max-w-screen-md pt-20">
       {initState.books.map((book) => (
-        <div key={book.id} style={divStyle}>
-          <p style={pStyle}>Title: {book.title}</p>
-          <p style={pStyle}>Author: {book.author}</p>
-          <p style={pStyle}>ISBN: {book.isbn}</p>
+        <div
+          key={book.id}
+          className="border border-gray-300 rounded-lg p-4 mb-4 bg-gray-100 shadow-md"
+        >
+          <p className="font-bold mb-2">Title: {book.title}</p>
+          <p className="font-bold mb-2">Author: {book.author}</p>
+          <p className="font-bold mb-2">ISBN: {book.isbn}</p>
         </div>
       ))}
     </div>
   );
 }
+
 export default Object;
